@@ -3,7 +3,7 @@ export const addPost = (state,action) => {
         {
         id : 5,
         username:'Birisi',
-        ...action.post,
+        post:action,
         }
     )
     return {

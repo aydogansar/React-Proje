@@ -4,7 +4,7 @@ import {ADD_POST} from './types';
 const PostsReducer = (state,action) => {
     switch (action.type) {
         case ADD_POST:
-            return addPost(state,action);
+            return addPost(state,action.payload);
     
         default:
             break;
