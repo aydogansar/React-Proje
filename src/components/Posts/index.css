@@ -1,0 +1,13 @@
+.post{
+    margin:0 0 10px 0;
+    width: 100%;
+    border: 1px solid #381460;
+    transition: .5s transform;
+}
+.post:hover{
+    transform: scale(1.01,1.01);
+    border-width:3px;
+}
+.post .card-header{
+    background:#fff;
+}

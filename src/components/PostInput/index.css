@@ -1,0 +1,16 @@
+#PostInput{
+    border:0;
+    outline: none;
+    resize: none;
+    height: 250px;
+    padding: 15px;
+}
+#RightSection .btn-info{
+    border-color: #ffbd69 ;
+    background: #ffbd69;
+    color:#fff;
+}
+#RightSection .btn-info:hover{
+    background: #f0a645;
+    
+}
