@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 import PostsContextProvider from './contexts/Posts/PostsContext';
+import ChannelsContextProvider from './contexts/Channels/ChannelsContext';
+
+import * as serviceWorker from './serviceWorker';
+
 
 const AppConnector = () =>{
  return (
-    <PostsContextProvider>
-        <App />
-    </PostsContextProvider>
+    <ChannelsContextProvider>
+        <PostsContextProvider>
+            <App />
+        </PostsContextProvider>
+    </ChannelsContextProvider>
  )
 }
 

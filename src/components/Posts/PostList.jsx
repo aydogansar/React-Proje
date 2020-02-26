@@ -1,12 +1,19 @@
 import React,{useContext} from 'react';
 import Post from './Post';
 import {PostsContext} from '../../contexts/Posts/PostsContext';
+import { ChannelsContext } from '../../contexts/Channels/ChannelsContext';
 
 const PostList = () => {
-    const {posts,isVisible} = useContext(PostsContext);
+    const {posts} = useContext(PostsContext);
+    const {selected} = useContext(ChannelsContext);
     return (
-        posts.map(p => {
-             return <Post key = {p.id} username = {p.username} post={p.post} isVisible = {isVisible} />
+        posts.slice(0).reverse()
+        .filter(
+            (p) => {
+                return p.channel === selected
+            })
+        .map(p => {
+             return <Post key = {p.id} username = {p.username} post={p.post}/>
         })
         
     )

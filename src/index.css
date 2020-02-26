@@ -1,7 +1,8 @@
 body{
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  background-color: #b21f66;
+  background: rgb(145,64,130);
+ background: linear-gradient(180deg, rgba(145,64,130,1) 0%, rgba(178,31,102,1) 74%, rgba(2,0,36,1) 100%, rgba(0,212,255,1) 100%);
 }
 .form-control:focus {
   border-color: inherit;
@@ -10,7 +11,7 @@ body{
 }
 .bg-mine{
   background: #381460;
-  border-bottom:1px solid #333;
+  border-bottom:1px solid #000;
 }
 #RightSection{
   height: 500px;
@@ -18,4 +19,14 @@ body{
 }
 .navbar{
   margin:0 0 10px 0;
+}
+.navbar-brand{
+  color:#ffbd69;
+  clip-path: inset(0 100% 0 0);
+  animation: text-reveal .8s ease-in-out forwards ;
+}
+@keyframes text-reveal{
+  to{
+    clip-path: inset(0 0 0 0);
+  }
 }

@@ -1,28 +1,38 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useState} from 'react';
 import posed from 'react-pose';
 import './index.css';
-import { useState } from 'react';
 
+
+const initialState = {
+    didAnimate:false
+}
 const AnimateBox = posed.div({
     visible : {
         opacity : 1,
-        marginTop: 0,
-        transition: { type: 'spring', stiffness: 100 }
+        x: 0,
+        transition: { type: 'spring', stiffness: 100}
     },
     hidden : {
         opacity : 0,
-        marginTop: -150
+        x: -150
     }
 })
 
 
-const Post = ({username,post, isVisible,isNew}) => {
-    const [visible,setVisible] = useState(isVisible);
-    useEffect(()=> {
-        setVisible({visible : true})    
+const Post = ({username,post}) => {
+    const [state,setState] = useState(initialState);
+    const animate = () => {
+        setState({
+            didAnimate : true
+        }) 
+    }
+    useEffect(() => {
+        //componentDidMount
+        //Animasyon sorunlu !!
+       animate();
     },[])
     return (
-        <AnimateBox pose={visible ? 'visible' : 'hidden'}>
+        <AnimateBox className="animatebox" pose={state.didAnimate ? 'visible' : 'hidden'}>
         <div className="card post">
             <div className="card-header">
                 {username}
