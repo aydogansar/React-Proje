@@ -1,5 +1,5 @@
 import React, {createContext, useReducer} from 'react';
-import PostsReducer from '../../services/Posts/PostsReducer';
+import PostsReducer from '../services/Posts/PostsReducer';
 
 export const PostsContext = createContext();
 

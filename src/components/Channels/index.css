@@ -9,17 +9,9 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: .8s all;
+    z-index: 150;
+}   
 
-}
-#Channels:hover{
-    width:100px;
-}
-#Channels:hover li{
-    width:100px;
-}
-#Channels:hover i{
-    margin-left:30px;
-}
 #Channels ul{
     list-style-type: none;
     float:left;
@@ -28,7 +20,6 @@
     left:-50px;
 }
 #Channels ul li{
-    display: block;
     padding: 10px;
     width: 50px;
     cursor:pointer;
@@ -55,3 +46,33 @@
     margin-left:5px;
     transition: .8s margin-left;
 }
+
+@media only screen and (min-width: 1500px){
+    #Channels{
+        width: 100px;
+        height:275px; 
+    }
+    #Channels ul li{
+        width:100px;
+    }
+    #Channels li i{
+        margin-left:20px;
+    }
+  }
+  @media only screen and (min-width: 2000px){
+    #Channels{
+        width: 150px;
+        height:350px; 
+    }
+    #Channels ul li{
+        width:150px;
+    }
+    #Channels li i{
+        margin-left:40px;
+    }
+  }
+
+  .customTooltip{
+    color:#fff !important;
+    font-weight: bolder;
+  }

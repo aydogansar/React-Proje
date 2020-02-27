@@ -14,3 +14,28 @@
     background: #f0a645;
     
 }
+ #channel{
+    border-radius: 0;
+    border:0;
+    cursor: pointer;
+    color:#381460;
+    font-weight: bolder;
+}
+#channel option {
+    background: #fff;
+    color:#381460;
+    cursor: pointer;
+    padding: 10px;
+} 
+
+#channel:hover{
+    background: #ddd;
+    
+}
+.icon{
+    background: #381460;
+    border-radius: 50%;
+    color:#fff;
+    padding:5px;
+    position: 'relative'
+}

@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import Post from './Post';
-import {PostsContext} from '../../contexts/Posts/PostsContext';
-import { ChannelsContext } from '../../contexts/Channels/ChannelsContext';
+import {PostsContext} from '../../contexts/PostsContext';
+import { ChannelsContext } from '../../contexts/ChannelsContext';
 
 const PostList = () => {
     const {posts} = useContext(PostsContext);

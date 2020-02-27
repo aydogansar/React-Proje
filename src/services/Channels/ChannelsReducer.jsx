@@ -5,9 +5,8 @@ const ChannelsReducer = (state,action) => {
     switch (action.type) {
         case CHANGE_CHANNEL:
             return changeChannel(state,action.payload);
-    
         default:
-            break;
+            return state;
     }
 }
 export default ChannelsReducer;

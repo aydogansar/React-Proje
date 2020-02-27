@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import './index.css';
-import {ChannelsContext} from '../../contexts/Channels/ChannelsContext';
+import {ChannelsContext} from '../../contexts/ChannelsContext';
+import ReactTooltip from 'react-tooltip';
 
 const Channels = ()  => {
     const {channels,dispatch,selected} = useContext(ChannelsContext);
@@ -12,7 +13,17 @@ const Channels = ()  => {
              <ul>
                 {
                     channels.map(li => {
-                        return <li key = {li.id} id={li.id} onClick={clickHandler} className={selected === li.id  ? 'active' : null}><i id={li.id} className={li.faClass}></i></li>
+                        return (
+                                <li 
+                                    key = {li.id} 
+                                    id = {li.id}
+                                    data-tip = {li.name}
+                                    onClick = {clickHandler} 
+                                    className = {selected === li.id  ? 'active' : null}>
+                                    <i id = {li.id} className = {li.faClass}></i>  
+                                    <ReactTooltip className="customTooltip" place = "right" type="dark" effect="solid"/>
+                                </li>
+                        )
                     })
                 }
              </ul>       

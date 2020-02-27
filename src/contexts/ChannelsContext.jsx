@@ -1,5 +1,5 @@
 import React,{createContext,useReducer} from 'react';
-import ChannelsReducer from '../../services/Channels/ChannelsReducer';
+import ChannelsReducer from '../services/Channels/ChannelsReducer';
 
 
 export const ChannelsContext =  createContext();
@@ -10,6 +10,7 @@ const initialState = {
             id:1,
             name:'Genel',
             faClass:'fas fa-hashtag'
+            
         },
         {
             id:2,

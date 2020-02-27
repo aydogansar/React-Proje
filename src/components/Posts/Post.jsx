@@ -28,7 +28,6 @@ const Post = ({username,post}) => {
     }
     useEffect(() => {
         //componentDidMount
-        //Animasyon sorunlu !!
        animate();
     },[])
     return (

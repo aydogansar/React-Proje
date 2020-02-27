@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
-import PostsContextProvider from './contexts/Posts/PostsContext';
-import ChannelsContextProvider from './contexts/Channels/ChannelsContext';
+import PostsContextProvider from './contexts/PostsContext';
+import ChannelsContextProvider from './contexts/ChannelsContext';
 
 import * as serviceWorker from './serviceWorker';
 
