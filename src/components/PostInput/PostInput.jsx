@@ -7,16 +7,16 @@ import SelectChannel from './SelectChannel';
 
 const initialState = {
     post : '',
-    channel:1,
+    channel:0,
     faClass: 'fab fa-weixin'
 }
 const Animate = posed.div({
     icon : {
         y:3,
-        x:3     
+        x:3  
     },
     channelIcon : {
-        x:'45%'
+        x:'45%' 
     }
 })
 
@@ -55,7 +55,7 @@ const PostInput = () => {
         }
     }
     const sendPost = (e) => {
-        if(state.post !== ''){
+        if(state.post !== '' && state.channel>0){
             channel.dispatch({type:'CHANGE_CHANNEL',payload:state.channel})
             post.dispatch({type:'ADD_POST', payload:{post:state.post,channel:state.channel}});
             setState({

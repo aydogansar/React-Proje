@@ -13,7 +13,7 @@ const PostList = () => {
                 return p.channel === selected
             })
         .map(p => {
-             return <Post key = {p.id} username = {p.username} post={p.post}/>
+             return <Post key = {p.id} id={p.id} username = {p.username} post={p.post}/>
         })
         
     )

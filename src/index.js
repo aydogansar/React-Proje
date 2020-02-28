@@ -7,13 +7,16 @@ import PostsContextProvider from './contexts/PostsContext';
 import ChannelsContextProvider from './contexts/ChannelsContext';
 
 import * as serviceWorker from './serviceWorker';
+import CommentsContextProvider from './contexts/CommentsContext';
 
 
 const AppConnector = () =>{
  return (
     <ChannelsContextProvider>
         <PostsContextProvider>
-            <App />
+            <CommentsContextProvider>
+                <App />
+            </CommentsContextProvider>
         </PostsContextProvider>
     </ChannelsContextProvider>
  )

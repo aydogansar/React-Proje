@@ -1,12 +1,11 @@
 .post{
     margin:0px 0 10px 0;
     width: 100%;
-    border: 1px solid #381460;
-    transition: .5s transform;
+    border: 3px solid #fff;
+    transition: border .5s;
 }
 .post:hover{
-    transform: scale(1.01,1.01);
-    border-width:3px;
+    border:3px solid #381460;
 }
 .post .card-header{
     background:#fff;

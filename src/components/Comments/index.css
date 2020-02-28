@@ -1,0 +1,30 @@
+.list-group{
+    width: 100%;
+}
+.commentButton{
+    cursor:pointer;
+    font-weight: bolder;
+}
+.commentButton:hover{
+    color:#381460;
+}
+.commentArea{
+    resize: none;
+    width:100%;
+    padding: 10px;
+    margin:10px;
+    outline:none;
+    border:1px outset #ddd;
+}
+.comments .button{
+    float: right;
+    border:0;
+    background: #fff;
+    color:#381460;
+    font-weight: bolder;
+    outline: none;
+   
+}
+.addCommentBox{
+   display: none;
+}

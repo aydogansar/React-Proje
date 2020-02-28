@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import posed from 'react-pose';
 import './index.css';
+import Comments from '../Comments/Comments';
 
 
 const initialState = {
@@ -19,7 +20,7 @@ const AnimateBox = posed.div({
 })
 
 
-const Post = ({username,post}) => {
+const Post = ({username,post,id}) => {
     const [state,setState] = useState(initialState);
     const animate = () => {
         setState({
@@ -38,8 +39,8 @@ const Post = ({username,post}) => {
             </div>
             <div className="card-body">
                 <blockquote className="blockquote mb-0">
-                <p>{post}</p>
-                <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                    <p>{post}</p>
+                    <Comments postId = {id}/>
                 </blockquote>
             </div>
         </div>
