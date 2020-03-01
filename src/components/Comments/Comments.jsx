@@ -3,27 +3,27 @@ import './index.css';
 import { CommentsContext } from '../../contexts/CommentsContext';
 import posed from  'react-pose';
 
+var uniqid = require('uniqid');
+
 const initialState = {
-    isDisplay : false,
+    isCommentDisplay : false,
     comment:''
 }
 const AnimateBox = posed.div({
-    hidden : {
-        opacity: 0,
-        height:0,
-        applyAtEnd: { display: "none" }
-        
-    },
-    visible : {
+    commentsVisible : {
+        applyAtStart: { display: "block" },
         opacity: 1,
-        height:120,
-        applyAtStart: { display: "block" }
+        height:'120px'
+    },
+    commentsHidden : {
+        applyAtEnd: { display: "none" },
+        opacity: 0,
+        height:'0px'   
     }
 })
-const Comments = ({postId}) => {
+const Comments = ({postId,commentsLimitPerPost}) => {
     const [state,setState] = useState(initialState)
-    const {comments,commentsLimitPerPost, dispatch} = useContext(CommentsContext);
-    console.log(state.isDisplay);
+    const {comments, dispatch} = useContext(CommentsContext);
     const changeHandler = (e) => {
         setState({
             ...state,
@@ -33,12 +33,17 @@ const Comments = ({postId}) => {
     const clickHandler = () => {
         setState({
             ...state,
-            isDisplay:!state.isDisplay
+            isCommentDisplay:!state.isCommentDisplay
         })
     }
     const addComment = (e)  => {
         if(state.comment !== ""){
             dispatch({type:"ADD_COMMENT" , payload:{postId:postId,comment:state.comment}})
+            setState({
+                ...state,
+                comment:'',
+                isCommentDisplay:false
+            })
         }
         e.preventDefault();
     }
@@ -49,28 +54,29 @@ const Comments = ({postId}) => {
         <footer className="blockquote-footer"> <span className="commentButton" onClick={clickHandler}>Yorum Yaz</span>
             
             <div className="comments">
-                <AnimateBox className="addCommentBox" pose={state.isDisplay ? 'visible' : 'hidden'}>
+                <AnimateBox  className="addCommentBox" pose={state.isCommentDisplay ? 'commentsVisible' : 'commentsHidden'}>
                         <form onSubmit={addComment}>
                             <button className="button">Yorumu Paylaş</button>
                             <textarea className="commentArea" value={state.comment} onChange={changeHandler} placeholder="Yorum Yap..."></textarea>
                             
                         </form>
                 </AnimateBox>
+                
                 <ul className="list-group list-group-flush">
                     {
                          commentsArr.slice(0,commentsLimitPerPost)
                         .map(c => {
                             return (
-                                <li key = {c.id} className="list-group-item">
+                                <li key = {uniqid()} className="list-group-item">
                                     <strong>{c.username}</strong> : {c.comment}
                                 </li>
                             )
                         })
                     }
                 </ul>
-                {
+                {/* {
                     commentsArr.length > commentsLimitPerPost ? <button className="btn btn-info btn-block">Daha fazla göster</button> : null
-                }
+                } */}
                 
             </div>
         </footer>

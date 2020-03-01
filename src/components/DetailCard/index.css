@@ -1,0 +1,28 @@
+#DetailCard{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 350px;
+    background: #fff;
+    overflow: auto;
+    border-left:5px outset #ffbd69;
+}
+#DetailCard .card{
+    border-radius: 0;
+}
+#DetailCard .controller{
+    float: left;
+    width: 100%;
+    height: 40px;
+    color:#381460;
+    padding: 10px;
+    font-size: 28px;
+}
+#DetailCard .controller i{
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#DetailCard .controller #close:hover{
+    color:#ffbd69;
+}

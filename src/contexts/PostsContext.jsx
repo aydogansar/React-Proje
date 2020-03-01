@@ -23,7 +23,9 @@ const initialState = {
             post: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum nostrum aliquid molestiae reprehenderit porro, molestias totam obcaecati iure quas aut. Atque esse sint autem nam omnis quidem magnam consequuntur quae.",
             channel : 2
         }
-    ]
+    ],
+    DetailedPostId : null,
+    DetailCardisDisplay : false
     
 }
 

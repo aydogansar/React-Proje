@@ -27,8 +27,7 @@ const initialState = {
             username:'Dilara',
             comment: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae hic dolorem modi, sunt veniam, repudiandae aspernatur ratione cumque labore veritatis, fugiat ipsum atque blanditiis doloremque? Ex animi voluptatem enim ad?"
         }
-    ],
-    commentsLimitPerPost:3
+    ]
 }
 
 export const CommentsContext = createContext();

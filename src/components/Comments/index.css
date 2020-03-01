@@ -1,9 +1,15 @@
+.comments{
+    user-select: none;
+}
+
 .list-group{
     width: 100%;
+    user-select:text;
 }
 .commentButton{
     cursor:pointer;
     font-weight: bolder;
+    user-select: none;
 }
 .commentButton:hover{
     color:#381460;
@@ -14,7 +20,8 @@
     padding: 10px;
     margin:10px;
     outline:none;
-    border:1px outset #ddd;
+    height: 80px;
+    border:1px solid #ddd;
 }
 .comments .button{
     float: right;
@@ -23,8 +30,19 @@
     color:#381460;
     font-weight: bolder;
     outline: none;
-   
+}
+.comments .button:after{
+    content:'';
+    float:left;
+    width:0;
+    height:0;
+    transition: all .5s;
+    background: #ffbd69;;
+}
+.comments .button:hover:after{
+    width:100%;
+    height:2px;
 }
 .addCommentBox{
-   display: none;
+    margin: 0 20px 0 0;
 }

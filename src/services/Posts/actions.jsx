@@ -1,7 +1,6 @@
 let x = 5;
 export const addPost = (state,action) => {
     x++;
-    console.log(action.channel)
     const newPost = (
         {
         id : x,
@@ -15,4 +14,19 @@ export const addPost = (state,action) => {
         posts:[...state.posts,newPost]
     }
     
+}
+
+export const changeDetailedPost = (state,action) => {
+    return {
+        ...state,
+        DetailedPostId:action.id,
+        DetailCardisDisplay:true
+    }
+}
+
+export const closeDetailCard = (state) => {
+    return {
+        ...state,
+        DetailCardisDisplay:false
+    }
 }

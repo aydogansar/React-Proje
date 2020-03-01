@@ -10,3 +10,17 @@
 .post .card-header{
     background:#fff;
 }
+.rightController{
+    float: right;
+}
+.rightController i{
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    padding: 5px;
+    transition: all .5s;
+    border-radius: 50%;
+}
+.rightController i:hover{
+    background: #381460;
+    color:#fff;
+}

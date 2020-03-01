@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import MainSection from './components/MainSection';
 import RightSection from './components/RightSection';
+import DetailCard from './components/DetailCard/DetailCard';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <RightSection/>
         </div>
       </div>
+      <DetailCard/>
     </React.Fragment>
   );
 }

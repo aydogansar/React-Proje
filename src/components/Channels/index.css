@@ -47,7 +47,7 @@
     transition: .8s margin-left;
 }
 
-@media only screen and (min-width: 1500px){
+/* @media only screen and (min-width: 1500px){
     #Channels{
         width: 100px;
         height:275px; 
@@ -58,8 +58,8 @@
     #Channels li i{
         margin-left:20px;
     }
-  }
-  @media only screen and (min-width: 2000px){
+  } */
+  /* @media only screen and (min-width: 2000px){
     #Channels{
         width: 150px;
         height:350px; 
@@ -70,7 +70,7 @@
     #Channels li i{
         margin-left:40px;
     }
-  }
+  } */
 
   .customTooltip{
     color:#fff !important;
